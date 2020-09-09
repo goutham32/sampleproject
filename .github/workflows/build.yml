@@ -26,9 +26,6 @@ jobs:
           args: . --dry-run -v --show-progress=dots --diff
  
 
-      - name: Lint Check
-        uses: michaelw90/PHP-Lint@master
-
       - name: Unit Tests
         run: |
           ./vendor/bin/phpunit tests
