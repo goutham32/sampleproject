@@ -1,0 +1,36 @@
+---
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "7.2"
+          extensions: mbstring, bcmath, curl, intl
+
+      - name: Install
+        run: |
+          composer install
+
+      - name: CS Check
+        uses: docker://oskarstark/php-cs-fixer-ga
+        with:
+          args: . --dry-run -v --show-progress=dots --diff
+ 
+
+      - name: Lint Check
+        uses: michaelw90/PHP-Lint@master
+
+      - name: Unit Tests
+        run: |
+          ./vendor/bin/phpunit tests
+
+
