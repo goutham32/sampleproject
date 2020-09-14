@@ -1,6 +1,5 @@
 <?php
 
-use \Mockery;
 use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase
@@ -26,4 +25,3 @@ class UserTest extends TestCase
         $this->assertEquals($expectedResult, $actualResult);
     }
 }
-
