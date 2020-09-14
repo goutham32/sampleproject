@@ -1,7 +1,5 @@
 <?php
-
-use \Database;
-
+require_once("Database.php");
 class USER
 {
     public $data;
