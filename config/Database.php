@@ -5,13 +5,13 @@ class Database
     protected static $db       = "db_sample_project";
     protected static $username = "root";
     protected static $pwd      = "";
-    public static $con;
+    public  static   $con;
 
     public function __construct()
     {
         self::$con = self::connect();
     }
-  
+
     protected static function connect()
     {
         try {
@@ -21,7 +21,7 @@ class Database
             }
             return $link;
         } catch (Exception $e) {
-            echo "Error: ".$e->getMessage();
+            echo "Error: " . $e->getMessage();
         }
     }
 
@@ -39,7 +39,8 @@ class Database
             $result = mysqli_query(self::$con, $query);
             return $result;
         } catch (Exception $e) {
-            echo "Error: ".$e->getMessage();
+            echo "Error: " . $e->getMessage();
         }
     }
 }
+
