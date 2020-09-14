@@ -1,5 +1,5 @@
 <?php
-class db
+class Database
 {
     protected static $host     = "localhost";
     protected static $db       = "db_sample_project";
@@ -25,12 +25,12 @@ class db
         }
     }
 
-    public static function close()
+    public  function close()
     {
         mysqli_close(self::$con);
     }
 
-    public static function run($query)
+    public  function run($query)
     {
         try {
             if (empty($query) && !isset($query)) {
