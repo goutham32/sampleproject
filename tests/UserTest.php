@@ -1,5 +1,6 @@
 <?php
 
+use \Mockery;
 use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase
@@ -8,8 +9,11 @@ class UserTest extends TestCase
     {
         require 'config/User.php';
         $value = ['first_name' => "Thrikkalangode", 'last_name' => "32", 'user_name' => "goutham", 'password' => "123456", 'dob' => "2018-03-12"];
-        $dataBase = $this->getMockBuilder('Database')->getMock();
-        $dataBase->method('run')->willReturn($value);
+        $dataBase = Mockery::mock('Database');
+        $dataBase->shouldReceive('run')
+            ->once()
+            ->andReturn($value);
+
         $expectedResult = [
             'first_name' => 'Thrikkalangode',
             'last_name'  => '32',
@@ -18,6 +22,8 @@ class UserTest extends TestCase
             'dob'        => '2018-03-12'
         ];
         $user = new USER($dataBase);
-        $this->assertEquals($expectedResult, $user->getUser());
+        $actualResult = $user->getUser();
+        $this->assertEquals($expectedResult, $actualResult);
     }
 }
+
