@@ -9,13 +9,13 @@ class USER extends Database
         parent::__construct();
         $this->database = $dataBase;
     }
-    
+
     public function getUser()
     {
         $query = "SELECT first_name, last_name, user_name, password, dob FROM registration";
-       
-        $data=$this->database->run($query);
-        var_dump($data);
+
+        $data = $this->database->run($query);
+        // var_dump($data);
         // $result = Database::run($query);
         // if (!$result) {
         //     $data = array('status'=>'error', 'msg'=>"Error");
