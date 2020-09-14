@@ -1,5 +1,7 @@
 <?php
-require_once("Database.php");
+
+use \Database;
+
 class USER
 {
     public $data;
@@ -20,4 +22,3 @@ class USER
         return $data;
     }
 }
-
