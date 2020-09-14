@@ -1,28 +1,22 @@
 <?php
 require_once("Database.php");
-class USER extends Database
+class USER
 {
     public $data;
     public $dataBase;
-    public function __construct($dataBase)
+    public function __construct($dataBase = null)
     {
-        parent::__construct();
+        if (is_null($dataBase)) {
+            $dataBase = new Database;
+        }
+
         $this->database = $dataBase;
     }
-    
+
     public function getUser()
     {
         $query = "SELECT first_name, last_name, user_name, password, dob FROM registration";
-       
-        $data=$this->database->run($query);
-        var_dump($data);
-        // $result = Database::run($query);
-        // if (!$result) {
-        //     $data = array('status'=>'error', 'msg'=>"Error");
-        // } else {
-        //     $resultSet = mysqli_fetch_assoc($result);
-        //     $data = $resultSet;
-        // }
+        $data = $this->database->run($query);
         return $data;
     }
 }
