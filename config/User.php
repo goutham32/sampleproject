@@ -1,12 +1,15 @@
 <?php
 require_once("Database.php");
-class USER extends Database
+class USER
 {
     public $data;
     public $dataBase;
-    public function __construct($dataBase)
+    public function __construct($dataBase = null)
     {
-        parent::__construct();
+        if (is_null($dataBase)) {
+            $dataBase = new Database;
+        }
+
         $this->database = $dataBase;
     }
 
