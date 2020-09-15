@@ -20,4 +20,5 @@ class User extends Database
         $data = $this->database->run($query);
         return $data;
     }
-}?>
+}
+?>
