@@ -1,10 +1,6 @@
 <?php
 
-namespace tests;
-
-include 'config/User.php';
-
-use config\User;
+use Config\User;
 use \Mockery;
 use PHPUnit\Framework\TestCase;
 
