@@ -4,5 +4,10 @@
     },
     "require": {
         "friendsofphp/php-cs-fixer": "^2.16"
+    },
+     "autoload": {
+        "psr-4": {
+            "Config\\": "config/"
+        }
     }
 }
