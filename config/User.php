@@ -1,10 +1,8 @@
 <?php
 
-namespace config;
+namespace Config;
 
-include 'config/Database.php';
-
-use config\Database;
+use Config\Database;
 
 class User extends Database
 {
