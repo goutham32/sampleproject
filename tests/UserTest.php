@@ -1,7 +1,7 @@
 <?php
 
 use Config\User;
-use \Mockery;
+use Mockery;
 use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase
