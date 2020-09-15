@@ -2,9 +2,9 @@
 
 namespace tests;
 
-include 'Config/User.php';
+include 'config/User.php';
 
-use Config\User;
+use config\User;
 use \Mockery;
 use PHPUnit\Framework\TestCase;
 
