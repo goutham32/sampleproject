@@ -1,5 +1,8 @@
 <?php
-require 'Config/User.php';
+
+namespace tests;
+
+include 'Config/User.php';
 
 use Config\User;
 use \Mockery;
@@ -27,3 +30,4 @@ class UserTest extends TestCase
         $this->assertEquals($expectedResult, $actualResult);
     }
 }
+?>
