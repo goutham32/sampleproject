@@ -1,6 +1,12 @@
 <?php
-require_once("Database.php");
-class USER
+
+namespace config;
+
+include 'Config/Database.php';
+
+use Config\Database;
+
+class User extends Database
 {
     public $data;
     public $dataBase;
@@ -20,3 +26,4 @@ class USER
         return $data;
     }
 }
+?>
