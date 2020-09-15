@@ -8,11 +8,8 @@ class User extends Database
 {
     public $data;
     public $dataBase;
-    public function __construct($dataBase = null)
+    public function __construct($dataBase)
     {
-        if (is_null($dataBase)) {
-            $dataBase = new Database;
-        }
 
         $this->database = $dataBase;
     }
