@@ -1,4 +1,9 @@
 <?php
+
+namespace config;
+
+use \Exception;
+
 class Database
 {
     protected static $host     = "localhost";
@@ -43,5 +48,4 @@ class Database
         }
     }
 }
-
 
