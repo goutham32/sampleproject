@@ -20,14 +20,13 @@ jobs:
         run: |
           composer install
 
+      - name: Unit Tests
+        run: |
+          ./vendor/bin/phpunit tests
+          
       - name: CS Check
         uses: docker://oskarstark/php-cs-fixer-ga
         with:
           args: . --dry-run -v --show-progress=dots --diff
- 
-
-      - name: Unit Tests
-        run: |
-          ./vendor/bin/phpunit tests
 
 
