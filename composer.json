@@ -5,9 +5,10 @@
     "require": {
         "friendsofphp/php-cs-fixer": "^2.16"
     },
-     "autoload": {
+    "autoload": {
         "psr-4": {
-            "Config\\": "config/"
+            "Config\\": "config/",
+            "Tests\\": "tests/"
         }
     }
 }
