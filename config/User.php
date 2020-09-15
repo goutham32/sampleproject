@@ -2,9 +2,9 @@
 
 namespace config;
 
-include 'Config/Database.php';
+include 'config/Database.php';
 
-use Config\Database;
+use config\Database;
 
 class User extends Database
 {
