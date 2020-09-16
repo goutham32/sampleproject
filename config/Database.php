@@ -11,10 +11,14 @@ class Database
     protected static $username = "root";
     protected static $pwd      = "";
     public  static   $con;
-
-    public function __construct()
+    public $dataBase;
+    public function __construct($dataBase = NULL)
     {
+        if(is_null($dataBase))
+        {
         self::$con = self::connect();
+        }
+        $this->database = $dataBase;
     }
 
     protected static function connect()
