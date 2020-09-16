@@ -27,4 +27,3 @@ class UserTest extends TestCase
         $this->assertEquals($expectedResult, $actualResult);
     }
 }
-?>

@@ -11,7 +11,7 @@ class Database
     protected static $username = "root";
     protected static $pwd      = "";
     public  static   $con;
-    public $dataBase;
+    public           $dataBase;
     public function __construct($dataBase = NULL)
     {
         if(is_null($dataBase))
@@ -52,4 +52,3 @@ class Database
         }
     }
 }
-?>
